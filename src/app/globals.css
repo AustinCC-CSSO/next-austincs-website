@@ -18,10 +18,27 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* styles/global.css */
+.gradient-background {
+  height: 300vh;
+  /* 300% of the viewport height */
+  background: linear-gradient(to bottom, #0a0f0d, #341f97, #00416A);
+  /* Dark blue to purple to blue */
+}
+
+/* More styles in global.css */
+.skyline-image {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  /* Ensure it's above the gradient */
+  opacity: 0;
+  /* Start invisible */
+  transition: opacity 0.5s ease-in-out;
 }
